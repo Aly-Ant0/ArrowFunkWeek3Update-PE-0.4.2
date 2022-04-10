@@ -5417,6 +5417,20 @@ class PlayState extends MusicBeatState
 								}
 						}
 			if (curSong == 'Blam')
+				{
+					// aud
+
+					if (curStep == 2488)
+						{
+							FlxG.sound.play(Paths.sound('oops'));
+						
+						}
+
+						if (curStep == 2492)
+							{
+								FlxG.sound.play(Paths.sound('oops'));
+							
+							}
 
 					//KLEITIN EVENT wip
 
