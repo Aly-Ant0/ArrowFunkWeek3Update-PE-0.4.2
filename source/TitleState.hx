@@ -508,7 +508,7 @@ class TitleState extends MusicBeatState
 						//ngSpr.visible = true;
 					case 17:
 						deleteCoolText();
-						ngSpr.visible = false;
+						//ngSpr.visible = false;
 						createCoolText(['another'], 15);
 					case 18:
 						deleteCoolText();
