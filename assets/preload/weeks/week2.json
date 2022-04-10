@@ -1,22 +1,43 @@
 {
-	"songs": [
-		["Spookeez", "spooky", [34, 51, 68]],
-		["South", "spooky", [34, 51, 68]],
-		["Monster", "monster", [34, 51, 68]]
-	],
-
-	"weekCharacters": [
-		"spooky",
-		"bf",
-		"gf"
-	],
-	"weekBackground": "halloween",
-
-	"storyName": "Spooky Month",
+	"storyName": "Spooky Party!!1",
+	"weekBackground": "stage",
+	"hideFreeplay": false,
 	"weekBefore": "week1",
-	"weekName": "Week 2",
 	"startUnlocked": true,
-
 	"hideStoryMode": false,
-	"hideFreeplay": false
+	"songs": [
+		[
+			"Bittersweet",
+			"kids",
+			[
+				194,
+				111,
+				135
+			]
+		],
+		[
+			"Nightfall",
+			"kidshappy",
+			[
+				74,
+				91,
+				228
+			]
+		],
+		[
+			"Virus",
+			"virus",
+			[
+				34,
+				71,
+				68
+			]
+		]
+	],
+	"weekCharacters": [
+		"kids",
+		"bidu",
+		"barbara"
+	],
+	"weekName": "WeekZ"
 }
