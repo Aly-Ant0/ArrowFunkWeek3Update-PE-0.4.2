@@ -538,7 +538,7 @@ class TitleState extends MusicBeatState
 						
 					case 26:
 						deleteCoolText();
-						bfSpr.visible = false;
+						//bfSpr.visible = false;
 						addMoreText(curWacky[0]);
 						
 					case 27:
