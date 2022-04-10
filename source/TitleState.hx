@@ -181,9 +181,9 @@ class TitleState extends MusicBeatState
 			// music.play();
 
 			if(FlxG.sound.music == null) {
-				FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
+				FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
 
-				FlxG.sound.music.fadeIn(4, 0, 0.7);
+				//FlxG.sound.music.fadeIn(4, 0, 0.7);
 			}
 		}
 
@@ -505,7 +505,7 @@ class TitleState extends MusicBeatState
 					case 16:
 						addMoreText('', -40);
 						addMoreText('newgrounds', -40);
-						ngSpr.visible = true;
+						//ngSpr.visible = true;
 					case 17:
 						deleteCoolText();
 						ngSpr.visible = false;
@@ -534,7 +534,7 @@ class TitleState extends MusicBeatState
 						addMoreText('look at this little dude', 15);
 						
 					case 25:
-						bfSpr.visible = true;
+						//bfSpr.visible = true;
 						
 					case 26:
 						deleteCoolText();
