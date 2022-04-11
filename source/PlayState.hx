@@ -1962,6 +1962,76 @@ class PlayState extends MusicBeatState
 					santa.dance(true);
 				}
 
+				if(curStage == 'baladamedo') {
+					
+					spookers.dance(true);
+
+				}
+
+				if(curStage == 'baladamedovirus') {
+
+					spookers.dance(true);
+					
+					if (curBeat % 1 == 0)
+						{
+							barbaravirus.animation.play('danceleft', true);
+						}
+					
+					if (curBeat % 2 == 0)
+						{
+							barbaravirus.animation.play('danceright', true);
+						}
+
+				}
+
+				if(curStage == 'favela') {
+					
+
+					danielzinho.dance(true);
+					
+					if (kleistate == 2)
+						{
+							if (curBeat % 2 == 0)
+							kleitin.animation.play('idle', true);
+						}
+
+					if (kleistate == 3)
+						{
+							if (curBeat % 2 == 0)
+							kleitin.animation.play('dance', true);
+						}
+
+						if (curBeat % 2 == 0)
+							{
+							daniel.dance(true);
+		
+							}
+
+					busao.dance(true);
+
+				}
+
+				if(curStage == 'favelanoite'){
+					
+					if (kleistate == 2)
+						{
+							if (curBeat % 2 == 0)
+							kleitin.animation.play('idle', true);
+						}
+
+					if (kleistate == 3)
+						{
+							if (curBeat % 2 == 0)
+							kleitin.animation.play('dance', true);
+						}
+
+					
+						pessoas.animation.play('dance', true);
+						
+						busao.dance(true);
+
+				}
+
 				switch (swagCounter)
 				{
 					case 0:
