@@ -1476,6 +1476,13 @@ class PlayState extends MusicBeatState
 		add(healthBar);
 		healthBarBG.sprTracker = healthBar;
 
+		//Coisa la da musica sla
+		songinfo = new AttachedSprite('song/song-' + curSong);
+		songinfo.scrollFactor.set();
+		songinfo.visible = !ClientPrefs.hideHud;
+		songinfo.x -= 500;
+		add(songinfo);
+
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
 		iconP1.y = healthBar.y - (iconP1.height / 2);
 		iconP1.visible = !ClientPrefs.hideHud;
