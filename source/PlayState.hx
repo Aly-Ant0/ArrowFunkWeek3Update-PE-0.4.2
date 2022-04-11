@@ -5503,7 +5503,7 @@ class PlayState extends MusicBeatState
 							if (kleistate == 1) 
 								{
 		
-									kleitin.animation.play('walk', false);
+									kleitin.animation.play('walk', true);
 									
 								}
 						}
