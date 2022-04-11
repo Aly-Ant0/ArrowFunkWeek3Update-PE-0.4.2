@@ -1486,6 +1486,8 @@ class PlayState extends MusicBeatState
 		healthBarOV.yAdd = -4;
 		add(healthBarOV);
 
+		if(ClientPrefs.downScroll) healthBarOV.y = 0.11 * FlxG.height;
+
 		//Coisa la da musica sla
 		songinfo = new AttachedSprite('song/song-' + curSong);
 		songinfo.scrollFactor.set();
