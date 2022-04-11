@@ -651,11 +651,11 @@ class PlayState extends MusicBeatState
 				kleitin = new BGSprite('stages/favela/kleitin', 2500, 255, 0.9, 0.9, ['kleiwalk']);
 				//2500, 240
 				kleitin.animation.addByPrefix('walk', 'kleiwalk', 24, true);
-				kleitin.animation.addByPrefix('stop', 'kleistop', 24);
-				kleitin.animation.addByPrefix('idle', 'kleidance', 24);
-				kleitin.animation.addByPrefix('susto', 'kleisusto', 24);
-				kleitin.animation.addByPrefix('dance', 'kleitin', 24);
-				kleitin.animation.addByPrefix('bala', 'kleitiro', 24);
+				kleitin.animation.addByPrefix('stop', 'kleistop', 24, false);
+				kleitin.animation.addByPrefix('idle', 'kleidance', 24, false);
+				kleitin.animation.addByPrefix('susto', 'kleisusto', 24, false);
+				kleitin.animation.addByPrefix('dance', 'kleitin', 24, false);
+				kleitin.animation.addByPrefix('bala', 'kleitiro', 24, false);
 				
 
 
@@ -778,11 +778,11 @@ class PlayState extends MusicBeatState
 				//kleito
 				kleitin = new BGSprite('stages/favelanoite/kleitin', 1080, 255, 0.9, 0.9, ['kleiwalk']);
 				kleitin.animation.addByPrefix('walk', 'kleiwalk', 24, true);
-				kleitin.animation.addByPrefix('stop', 'kleistop', 24);
-				kleitin.animation.addByPrefix('idle', 'kleidance', 24);
-				kleitin.animation.addByPrefix('susto', 'kleisusto', 24);
-				kleitin.animation.addByPrefix('dance', 'kleitin', 24);
-				kleitin.animation.addByPrefix('bala', 'kleitiro'  24);
+				kleitin.animation.addByPrefix('stop', 'kleistop', 24, false);
+				kleitin.animation.addByPrefix('idle', 'kleidance', 24, false);
+				kleitin.animation.addByPrefix('susto', 'kleisusto', 24, false);
+				kleitin.animation.addByPrefix('dance', 'kleitin', 24, false);
+				kleitin.animation.addByPrefix('bala', 'kleitiro'  24, false);
 
 				favelalight = new BGSprite('stages/favelanoite/layer7', 0, 0, 0.1, 0.1);
 				favelalight.screenCenter(XY);
