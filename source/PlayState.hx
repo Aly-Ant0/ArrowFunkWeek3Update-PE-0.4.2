@@ -651,7 +651,7 @@ class PlayState extends MusicBeatState
 				kleitin = new BGSprite('stages/favela/kleitin', 2500, 255, 0.9, 0.9, ['kleiwalk']);
 				//2500, 240
 				kleitin.animation.addByPrefix('walk', 'kleiwalk', 24, true);
-				kleitin.animation.addByPrefix('stop', 'kleistop', 24, false);
+				kleitin.animation.addByPrefix('stop', 'kleistop', 24, true);
 				kleitin.animation.addByPrefix('idle', 'kleidance', 24, false);
 				kleitin.animation.addByPrefix('susto', 'kleisusto', 24, false);
 				kleitin.animation.addByPrefix('dance', 'kleitin', 24, false);
@@ -1985,7 +1985,6 @@ class PlayState extends MusicBeatState
 				}
 
 				if(curStage == 'favela') {
-					
 
 					danielzinho.dance(true);
 					
@@ -2007,7 +2006,6 @@ class PlayState extends MusicBeatState
 		
 							}
 
-					kleitin.dance(true);
 					busao.dance(true);
 
 				}
@@ -5542,7 +5540,7 @@ class PlayState extends MusicBeatState
 								onComplete: function(twn:FlxTween)
 								{
 			
-									kleitin.animation.play('walk');
+									kleitin.animation.play('walk', true);
 									kleistate = 2;
 								
 								}
