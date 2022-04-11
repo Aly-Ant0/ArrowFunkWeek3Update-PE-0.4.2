@@ -508,7 +508,7 @@ class PlayState extends MusicBeatState
 				front.updateHitbox();
 				add(front);
 				
-				spookers = new BGSprite('stages/baladamedo/spookers', 0, 0, 0.9, 0.9, ['SPEAKERS']);
+				spookers = new BGSprite('stages/baladamedo/spookers', 0, 0, 0.9, 0.9, ['SPEAKERS'], true);
 				spookers.screenCenter(XY);
 				spookers.y += 125;
 				spookers.x += 6;
@@ -517,11 +517,11 @@ class PlayState extends MusicBeatState
 				//CHAO (por favor funciona eu nao aguento mais esse sofrimento)
 
 				dancef = new BGSprite('stages/baladamedo/dancefloor', 0, 0, 0.9, 0.9, ['floor0a']);
-				dancef.animation.addByPrefix('floor1', 'floor1a', 24, false);
-				dancef.animation.addByPrefix('floor2', 'floor2a', 24, false);
-				dancef.animation.addByPrefix('floor3', 'floor3a', 24, false);	
-				dancef.animation.addByPrefix('floor4', 'floor4a', 24, false);
-				dancef.animation.addByPrefix('floor5', 'floor5a', 24, false);
+				dancef.animation.addByPrefix('floor1', 'floor1a', 24, true);
+				dancef.animation.addByPrefix('floor2', 'floor2a', 24, true);
+				dancef.animation.addByPrefix('floor3', 'floor3a', 24, true);	
+				dancef.animation.addByPrefix('floor4', 'floor4a', 24, true);
+				dancef.animation.addByPrefix('floor5', 'floor5a', 24, true);
 				dancef.screenCenter(XY);
 				dancef.visible = ClientPrefs.flashing;
 				add(dancef);
@@ -545,23 +545,23 @@ class PlayState extends MusicBeatState
 				add(front);
 				
 				dancef = new BGSprite('stages/baladamedo/dancefloor_virus', 0, 0, 0.9, 0.9, ['floor0a']);
-				dancef.animation.addByPrefix('floor1', 'floor1a', 24, false);
-				dancef.animation.addByPrefix('floor2', 'floor2a', 24, false);
-				dancef.animation.addByPrefix('floor3', 'floor3a', 24, false);	
-				dancef.animation.addByPrefix('floor4', 'floor4a', 24, false);
-				dancef.animation.addByPrefix('floor5', 'floor5a', 24, false);
+				dancef.animation.addByPrefix('floor1', 'floor1a', 24, true);
+				dancef.animation.addByPrefix('floor2', 'floor2a', 24, true);
+				dancef.animation.addByPrefix('floor3', 'floor3a', 24, true);	
+				dancef.animation.addByPrefix('floor4', 'floor4a', 24, true);
+				dancef.animation.addByPrefix('floor5', 'floor5a', 24, true);
 				dancef.screenCenter(XY);
 				add(dancef);
 
-				spookers = new BGSprite('stages/baladamedo/spookers_virus', 0, 0, 0.9, 0.9, ['SPEAKERS_VIRUS']);
+				spookers = new BGSprite('stages/baladamedo/spookers_virus', 0, 0, 0.9, 0.9, ['SPEAKERS_VIRUS'], true);
 				spookers.screenCenter(XY);
 				spookers.y += 125;
 				spookers.x += 6;
 				add(spookers);
 
 				barbaravirus = new BGSprite('stages/baladamedo/barbara', 0, 0, 0.9, 0.9, ['danceleft']);
-				barbaravirus.animation.addByPrefix('danceleft', 'danceleft', 24, false);
-				barbaravirus.animation.addByPrefix('danceright', 'danceright', 24, false);
+				barbaravirus.animation.addByPrefix('danceleft', 'danceleft', 24, true);
+				barbaravirus.animation.addByPrefix('danceright', 'danceright', 24, true);
 				add(barbaravirus);
 				barbaravirus.y -= 630;
 				barbaravirus.x -= 630;
@@ -624,7 +624,7 @@ class PlayState extends MusicBeatState
 				thing.screenCenter(XY);
 				add(thing);
 
-				danielzinho = new BGSprite('stages/favela/danielzinho', 500, 510, 0.7, 0.7, ['danielwalk']);
+				danielzinho = new BGSprite('stages/favela/danielzinho', 500, 510, 0.7, 0.7, ['danielwalk'], true);
 				//danielzinho.x = 500;
 				add(danielzinho);
 				
@@ -632,7 +632,7 @@ class PlayState extends MusicBeatState
 				carrofoda = new BGSprite('stages/favela/carrofoda', 0, 600, 0.72, 0.72);
 				add(carrofoda);
 				
-				busao = new BGSprite('stages/favela/busao', 2300, -40, 0.7, 0.7, ['busao']);
+				busao = new BGSprite('stages/favela/busao', 2300, -40, 0.7, 0.7, ['busao'], true);
 				add(busao);
 
 				var city:BGSprite = new BGSprite('stages/favela/layer2', 0, 0, 0.85, 0.85);
@@ -644,7 +644,7 @@ class PlayState extends MusicBeatState
 				add(street);
 				//street.alpha = 0.5; //a
 				
-				daniel = new BGSprite('stages/favela/daniel', -540, 260, 0.92, 0.91, ['danieldance']);
+				daniel = new BGSprite('stages/favela/daniel', -540, 260, 0.92, 0.91, ['danieldance'], true);
 				//daniel.screenCenter(XY);
 				daniel.x = -2000;
 				//kleito
@@ -761,7 +761,7 @@ class PlayState extends MusicBeatState
 				carrofoda = new BGSprite('stages/favelanoite/carrofoda', -600, 600, 0.72, 0.72);
 				add(carrofoda);
 
-				busao = new BGSprite('stages/favelanoite/busao', 230, -40, 0.7, 0.7, ['busao']);
+				busao = new BGSprite('stages/favelanoite/busao', 230, -40, 0.7, 0.7, ['busao'], true);
 				add(busao);
 
 				var city:BGSprite = new BGSprite('stages/favelanoite/layer2', 0, 0, 0.85, 0.85);
@@ -772,23 +772,23 @@ class PlayState extends MusicBeatState
 				street.screenCenter(XY);
 				add(street);
 				
-				daniel = new BGSprite('stages/favelanoite/daniel', -540, 260, 0.92, 0.91, ['danieldance']);
+				daniel = new BGSprite('stages/favelanoite/daniel', -540, 260, 0.92, 0.91, ['danieldance'], true);
 				//daniel.screenCenter(XY);
 				
 				//kleito
 				kleitin = new BGSprite('stages/favelanoite/kleitin', 1080, 255, 0.9, 0.9, ['kleiwalk']);
 				kleitin.animation.addByPrefix('walk', 'kleiwalk', 24, true);
-				kleitin.animation.addByPrefix('stop', 'kleistop', 24, false);
-				kleitin.animation.addByPrefix('idle', 'kleidance', 24, false);
-				kleitin.animation.addByPrefix('susto', 'kleisusto', 24, false);
-				kleitin.animation.addByPrefix('dance', 'kleitin', 24, false);
-				kleitin.animation.addByPrefix('bala', 'kleitiro', 24, false);
+				kleitin.animation.addByPrefix('stop', 'kleistop', 24, true);
+				kleitin.animation.addByPrefix('idle', 'kleidance', 24, true);
+				kleitin.animation.addByPrefix('susto', 'kleisusto', 24, true);
+				kleitin.animation.addByPrefix('dance', 'kleitin', 24, true);
+				kleitin.animation.addByPrefix('bala', 'kleitiro', 24, true);
 
 				favelalight = new BGSprite('stages/favelanoite/layer7', 0, 0, 0.1, 0.1);
 				favelalight.screenCenter(XY);
 
-				pessoas = new BGSprite('stages/favelanoite/CARRO', 0, 0, 1, 1, ['carroum']);
-				pessoas.animation.addByPrefix('dance', 'carroum', 24, false);
+				pessoas = new BGSprite('stages/favelanoite/CARRO', 0, 0, 1, 1, ['carroum'], true);
+				pessoas.animation.addByPrefix('dance', 'carroum', 24, true);
 				pessoas.screenCenter(XY);
 				pessoas.y += 685;
 				
