@@ -237,7 +237,6 @@ class PlayState extends MusicBeatState
 		//eis que a favela venceu fml tmj
 
 		private var gfmedo:Bool = false;
-		var kleistate:Int = 3;
 
 		var carrofoda:BGSprite;
 		var danielzinho:BGSprite;
@@ -652,10 +651,10 @@ class PlayState extends MusicBeatState
 				//2500, 240
 				kleitin.animation.addByPrefix('walk', 'kleiwalk', 24, true);
 				kleitin.animation.addByPrefix('stop', 'kleistop', 24, true);
-				kleitin.animation.addByPrefix('idle', 'kleidance', 24, false);
-				kleitin.animation.addByPrefix('susto', 'kleisusto', 24, false);
-				kleitin.animation.addByPrefix('dance', 'kleitin', 24, false);
-				kleitin.animation.addByPrefix('bala', 'kleitiro', 24, false);
+				kleitin.animation.addByPrefix('idle', 'kleidance', 24, true);
+				kleitin.animation.addByPrefix('susto', 'kleisusto', 24, true);
+				kleitin.animation.addByPrefix('dance', 'kleitin', 24, true);
+				kleitin.animation.addByPrefix('bala', 'kleitiro', 24, true);
 
 				//danielzinho.x = 500;
 
@@ -774,13 +773,13 @@ class PlayState extends MusicBeatState
 				//daniel.screenCenter(XY);
 				
 				//kleito
-				kleitin = new BGSprite('stages/favelanoite/kleitin', 1080, 255, 0.9, 0.9, ['kleiwalk']);
+				kleitin = new BGSprite('stages/favelanoite/kleitin', 1080, 255, 0.9, 0.9, ['kleitin']);
 				kleitin.animation.addByPrefix('walk', 'kleiwalk', 24, true);
-				kleitin.animation.addByPrefix('stop', 'kleistop', 24, false);
-				kleitin.animation.addByPrefix('idle', 'kleidance', 24, false);
-				kleitin.animation.addByPrefix('susto', 'kleisusto', 24, false);
-				kleitin.animation.addByPrefix('dance', 'kleitin', 24, false);
-				kleitin.animation.addByPrefix('bala', 'kleitiro',  24, false);
+				kleitin.animation.addByPrefix('stop', 'kleistop', 24, true);
+				kleitin.animation.addByPrefix('idle', 'kleidance', 24, true);
+				kleitin.animation.addByPrefix('susto', 'kleisusto', 24, true);
+				kleitin.animation.addByPrefix('dance', 'kleitin', 24, true);
+				kleitin.animation.addByPrefix('bala', 'kleitiro',  24, true);
 
 				favelalight = new BGSprite('stages/favelanoite/layer7', 0, 0, 0.1, 0.1);
 				favelalight.screenCenter(XY);
@@ -1961,77 +1960,6 @@ class PlayState extends MusicBeatState
 					bottomBoppers.dance(true);
 					santa.dance(true);
 				}
-
-				if(curStage == 'baladamedo') {
-					
-					spookers.dance(true);
-
-				}
-
-				if(curStage == 'baladamedovirus') {
-
-					spookers.dance(true);
-					
-					if (curBeat % 1 == 0)
-						{
-							barbaravirus.animation.play('danceleft', true);
-						}
-					
-					if (curBeat % 2 == 0)
-						{
-							barbaravirus.animation.play('danceright', true);
-						}
-
-				}
-
-				if(curStage == 'favela') {
-
-					danielzinho.dance(true);
-					
-					if (kleistate == 2)
-						{
-							if (curBeat % 2 == 0)
-							kleitin.animation.play('idle', true);
-						}
-
-					if (kleistate == 3)
-						{
-							if (curBeat % 2 == 0)
-							kleitin.animation.play('dance', true);
-						}
-
-						if (curBeat % 2 == 0)
-							{
-							daniel.dance(true);
-		
-							}
-
-					busao.dance(true);
-
-				}
-
-				if(curStage == 'favelanoite'){
-					
-					if (kleistate == 2)
-						{
-							if (curBeat % 2 == 0)
-							kleitin.animation.play('idle', true);
-						}
-
-					if (kleistate == 3)
-						{
-							if (curBeat % 2 == 0)
-							kleitin.animation.play('dance', true);
-						}
-
-					
-						pessoas.animation.play('dance', true);
-						
-						busao.dance(true);
-
-				}
-
-					kleitin.dance(true);
 
 				switch (swagCounter)
 				{
@@ -5496,16 +5424,6 @@ class PlayState extends MusicBeatState
 										}
 						//fim dos suus
 						}
-
-					if (curStage == 'favela' || curStage == 'favelanoite')
-						{
-							if (kleistate == 1) 
-								{
-		
-									kleitin.animation.play('walk', true);
-									
-								}
-						}
 			if (curSong == 'Blam')
 				{
 					// aud
@@ -5526,7 +5444,6 @@ class PlayState extends MusicBeatState
 
 					if (curStep == 16) //fiz isso pra saporra nao trava na hora das notinha //(spoiler: NÃO FUNCIONOU)
 						{
-							kleistate = 1;
 							FlxTween.tween(kleitin, {x: 2600}, 3.8, {ease: FlxEase.quartOut});
 						
 						}
@@ -5539,20 +5456,23 @@ class PlayState extends MusicBeatState
 								ease: FlxEase.linear,
 								onComplete: function(twn:FlxTween)
 								{
-			
+
+                  kleitin.visible = true;
 									kleitin.animation.play('walk', true);
-									kleistate = 2;
 								
 								}
 							});
 
 						}
-
+						//ANIMAÇÃO IDLE DELE EU NAO SEI COMO RESOLVER ISSO NA 0.4.2 DESCULPAq
+						if (curStep == 762) //toca animacao idle dele, eu acho que é por ai kk
+						{
+                  kleitin.animation.play('idle', true);
+						}
 						if (curStep == 1904) //sentou
 							{
 								defaultCamZoom = 0.82;
 									kleitin.animation.play('dance', true);
-								kleistate = 3;
 							}
 
 					//DANIEL EVENT
