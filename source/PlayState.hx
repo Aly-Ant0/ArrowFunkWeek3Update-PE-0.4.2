@@ -5458,7 +5458,7 @@ class PlayState extends MusicBeatState
 								{
 
                   kleitin.visible = true;
-									kleitin.animation.play('walk', true);
+									kleitin.animation.play('idle', true);
 								
 								}
 							});
@@ -5467,7 +5467,7 @@ class PlayState extends MusicBeatState
 						//ANIMAÇÃO IDLE DELE EU NAO SEI COMO RESOLVER ISSO NA 0.4.2 DESCULPAq
 						if (curStep == 762) //toca animacao idle dele, eu acho que é por ai kk
 						{
-                  kleitin.animation.play('idle', true);
+                  kleitin.animation.play('walk', true);
 						}
 						if (curStep == 1904) //sentou
 							{
