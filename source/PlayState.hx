@@ -656,8 +656,6 @@ class PlayState extends MusicBeatState
 				kleitin.animation.addByPrefix('susto', 'kleisusto', 24, false);
 				kleitin.animation.addByPrefix('dance', 'kleitin', 24, false);
 				kleitin.animation.addByPrefix('bala', 'kleitiro', 24, false);
-				
-
 
 				//danielzinho.x = 500;
 
@@ -1994,13 +1992,13 @@ class PlayState extends MusicBeatState
 					if (kleistate == 2)
 						{
 							if (curBeat % 2 == 0)
-							kleitin.animation.play('idle');
+							kleitin.animation.play('idle', true);
 						}
 
 					if (kleistate == 3)
 						{
 							if (curBeat % 2 == 0)
-							kleitin.animation.play('dance');
+							kleitin.animation.play('dance', true);
 						}
 
 						if (curBeat % 2 == 0)
@@ -2009,6 +2007,7 @@ class PlayState extends MusicBeatState
 		
 							}
 
+					kleitin.dance(true);
 					busao.dance(true);
 
 				}
@@ -2018,13 +2017,13 @@ class PlayState extends MusicBeatState
 					if (kleistate == 2)
 						{
 							if (curBeat % 2 == 0)
-							kleitin.animation.play('idle');
+							kleitin.animation.play('idle', true);
 						}
 
 					if (kleistate == 3)
 						{
 							if (curBeat % 2 == 0)
-							kleitin.animation.play('dance');
+							kleitin.animation.play('dance', true);
 						}
 
 					
