@@ -650,12 +650,12 @@ class PlayState extends MusicBeatState
 				//kleito
 				kleitin = new BGSprite('stages/favela/kleitin', 2500, 255, 0.9, 0.9, ['kleiwalk']);
 				//2500, 240
-				kleitin.animation.addByPrefix('walk', 'kleiwalk');
-				kleitin.animation.addByPrefix('stop', 'kleistop');
-				kleitin.animation.addByPrefix('idle', 'kleidance');
-				kleitin.animation.addByPrefix('susto', 'kleisusto');
-				kleitin.animation.addByPrefix('dance', 'kleitin');
-				kleitin.animation.addByPrefix('bala', 'kleitiro');
+				kleitin.animation.addByPrefix('walk', 'kleiwalk', 24, true);
+				kleitin.animation.addByPrefix('stop', 'kleistop', 24);
+				kleitin.animation.addByPrefix('idle', 'kleidance', 24);
+				kleitin.animation.addByPrefix('susto', 'kleisusto', 24);
+				kleitin.animation.addByPrefix('dance', 'kleitin', 24);
+				kleitin.animation.addByPrefix('bala', 'kleitiro', 24);
 				
 
 
@@ -777,12 +777,12 @@ class PlayState extends MusicBeatState
 				
 				//kleito
 				kleitin = new BGSprite('stages/favelanoite/kleitin', 1080, 255, 0.9, 0.9, ['kleiwalk']);
-				kleitin.animation.addByPrefix('walk', 'kleiwalk');
-				kleitin.animation.addByPrefix('stop', 'kleistop');
-				kleitin.animation.addByPrefix('idle', 'kleidance');
-				kleitin.animation.addByPrefix('susto', 'kleisusto');
-				kleitin.animation.addByPrefix('dance', 'kleitin');
-				kleitin.animation.addByPrefix('bala', 'kleitiro');
+				kleitin.animation.addByPrefix('walk', 'kleiwalk', 24, true);
+				kleitin.animation.addByPrefix('stop', 'kleistop', 24);
+				kleitin.animation.addByPrefix('idle', 'kleidance', 24);
+				kleitin.animation.addByPrefix('susto', 'kleisusto', 24);
+				kleitin.animation.addByPrefix('dance', 'kleitin', 24);
+				kleitin.animation.addByPrefix('bala', 'kleitiro'  24);
 
 				favelalight = new BGSprite('stages/favelanoite/layer7', 0, 0, 0.1, 0.1);
 				favelalight.screenCenter(XY);
@@ -2033,6 +2033,8 @@ class PlayState extends MusicBeatState
 						busao.dance(true);
 
 				}
+
+					kleitin.dance(true);
 
 				switch (swagCounter)
 				{
@@ -5541,7 +5543,7 @@ class PlayState extends MusicBeatState
 								onComplete: function(twn:FlxTween)
 								{
 			
-									kleitin.animation.play('stop', true);
+									kleitin.animation.play('walk', true);
 									kleistate = 2;
 								
 								}
