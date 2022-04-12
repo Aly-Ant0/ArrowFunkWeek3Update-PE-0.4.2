@@ -5448,7 +5448,7 @@ class PlayState extends MusicBeatState
 						
 						}
 
-					if (curStep == 752) //752
+					if (curStep == 752) //aparece o kleitin uaaaauu, mágica :0
 						{
 							
 							FlxTween.tween(kleitin, {x: 1080}, 3.8, {
@@ -5458,16 +5458,20 @@ class PlayState extends MusicBeatState
 								{
 
                   kleitin.visible = true;
-									kleitin.animation.play('idle', true);
+									kleitin.animation.play('walk', true);
 								
 								}
 							});
 
 						}
-						//ANIMAÇÃO IDLE DELE EU NAO SEI COMO RESOLVER ISSO NA 0.4.2 DESCULPAq
+						if (curStep == 760) //toca animacao quando ele anda, eu acho que é por ai kk
+						{
+                  kleitin.animation.play('stop', true);
+						}
+						//ANIMAÇÃO IDLE DELE EU NAO SEI COMO RESOLVER ISSO NA 0.4.2 DESCULPA
 						if (curStep == 762) //toca animacao idle dele, eu acho que é por ai kk
 						{
-                  kleitin.animation.play('walk', true);
+                  kleitin.animation.play('idle', true);
 						}
 						if (curStep == 1904) //sentou
 							{
